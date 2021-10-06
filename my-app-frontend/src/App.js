@@ -1,6 +1,6 @@
 import './App.css';
 // import UsersContainer from './components/UsersContainer';
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import  NavBar  from "./components/NavBar"
 import  HomePage  from "./components/HomePage"
@@ -9,16 +9,20 @@ import Friends from './components/Friends';
 import Games from './components/Games';
 
 function App() {
-
-
-//  const [ users, setUsers] = useState([])
+  const [ users, setUsers] = useState([])
 
     const getUsers = () => {
         fetch("http://localhost:9292/users")
         .then(resp => resp.json())
-        .then(usersData => console.log(usersData))
+        .then(userData => setUsers(userData))
         // .then(usersData => setUsers(usersData))
       }
+
+      useEffect(() => {
+        fetch("http://localhost:9292/users")
+          .then((res) => res.json())
+          .then(setUsers)  
+      }, [])
 
     
     // const renderNewUsers = (newUser) => {
@@ -39,7 +43,6 @@ function App() {
     <div className="App">
     <Router> 
     <NavBar />
-
         <Route path="/homepage">
             <HomePage />
         </Route>
@@ -53,7 +56,7 @@ function App() {
         </Route >
 
         <Route exact path="/">
-             <Login />  
+             <Login users={users}/>  
         </Route >
     </Router>
     </div>

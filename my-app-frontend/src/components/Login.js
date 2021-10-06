@@ -1,10 +1,13 @@
 import React from 'react'
 
-function Login() {
+function Login({ users }) {
+
+    console.log(users)
     return (
         <div class="row">
         <div class="column1">
             <form className="login-form">
+                <label></label>
                 <label>Gamertag/E-mail: </label>
                 <input type="text" name="name" className="login-form-input" placeholder="Gamertag/E-mail..." />
                 <label>Password: </label>
