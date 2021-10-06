@@ -5,13 +5,21 @@ function UsersContainer() {
     const getUsers = () => {
         fetch("http://localhost:9292/users")
         .then(resp => resp.json())
-        .then(user=> console.log(user))
+        .then(usersArray=> console.log(usersArray))
       }
-      debugger;
+
+    const renderUsers = (usersArray) => {
+        return (
+            <div>hi</div>
+        )
+    }
+
+    debugger;
 
     return (
       <div>
         LOOK AT ALL THESE USERS
+        
       </div>
     );
   }
