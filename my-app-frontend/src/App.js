@@ -34,7 +34,6 @@ function App() {
       // .then(userData => setUsers(userData))
     }
 
-    debugger;
 
   return (
     <div className="App">
