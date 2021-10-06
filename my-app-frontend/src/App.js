@@ -14,8 +14,7 @@ function App() {
     const getUsers = () => {
         fetch("http://localhost:9292/users")
         .then(resp => resp.json())
-        .then(userData => setUsers(userData))
-        // .then(usersData => setUsers(usersData))
+        .then(usersData => setUsers(usersData))
       }
 
       useEffect(() => {
@@ -23,28 +22,24 @@ function App() {
           .then((res) => res.json())
           .then(setUsers)  
       }, [])
-
     
     // const renderNewUsers = (newUser) => {
     //   console.log(usersData)
     //   setUsers([...users, newUser])
-     
     // }
 
     const getUser = (id) => {
       fetch(`http://localhost:9292/users/${id}`)
       .then(resp => resp.json())
-      .then(userData => console.log(userData))
-      // .then(userData => setUsers(userData))
+      .then(userData => setUsers(userData))
     }
-
 
   return (
     <div className="App">
     <Router> 
     <NavBar />
         <Route path="/homepage">
-            <HomePage />
+            <HomePage users={users}/>
         </Route>
 
         <Route path="/friends">
