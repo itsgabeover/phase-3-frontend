@@ -32,3 +32,25 @@ code {
   background: #afb0ff;
   background-clip: margin-box;
 }
+
+.login-form {
+  padding-top: 50px;
+  max-width: 500px;
+}
+.login-form-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.column1 {
+  float: left;
+  margin-left: 50px;
+}
+.column2 {
+  float: right;
+  margin-right: 50px;
+}
