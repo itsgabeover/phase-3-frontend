@@ -33,15 +33,15 @@ function App() {
     <Router> 
     <NavBar />
         
-        <Route path="/HomePage">
+        <Route path="/homepage">
             <HomePage />
         </Route>
 
-        <Route path="/Friends">
+        <Route path="/friends">
             <Friends />
         </Route>
 
-        <Route path="/Games">
+        <Route path="/games">
             <Games />
         </Route >
 
