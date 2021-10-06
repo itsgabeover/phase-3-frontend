@@ -1,9 +1,12 @@
 import './App.css';
 import UsersContainer from './components/UsersContainer';
 import React, {useState, useEffect } from "react";
-import { Route, Switch } from "react-router-dom"
-import  NavBar  from "./Components/NavBar"
-import  HomePage  from "./Components/HomePage"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import  NavBar  from "./components/NavBar"
+import  HomePage  from "./components/HomePage"
+import Login from './components/Login';
+import Friends from './components/Friends';
+import Games from './components/Games';
 
 function App() {
 
@@ -17,23 +20,19 @@ function App() {
       }
 
 
-    const renderNewUsers = (newUser) => {
-      console.log(usersData)
-      setUsers([...users, newUser])
+    // const renderNewUsers = (newUser) => {
+    //   console.log(usersData)
+    //   setUsers([...users, newUser])
      
-    }
+    // }
 
 
 
   return (
     <div className="App">
-    <NavBar onAddEvent={handleAddEvent}/>
-      <Switch>
-
-        <Route path="/">
-             <Login />
-        </Route >
-
+    <Router> 
+    <NavBar />
+        
         <Route path="/HomePage">
             <HomePage />
         </Route>
@@ -45,8 +44,11 @@ function App() {
         <Route path="/Games">
             <Games />
         </Route >
-    
-      </Switch>
+
+        <Route exact path="/">
+             <Login />  
+        </Route >
+    </Router>
     </div>
   );
 }
