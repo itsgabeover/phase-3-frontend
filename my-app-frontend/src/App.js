@@ -9,8 +9,6 @@ import Friends from './components/Friends';
 import Games from './components/Games';
 
 function App() {
-
-
 //  const [ users, setUsers] = useState([])
 
     const getUsers = () => {
@@ -19,7 +17,6 @@ function App() {
         .then(usersData => console.log(usersData))
         // .then(usersData => setUsers(usersData))
       }
-
     
     // const renderNewUsers = (newUser) => {
     //   console.log(usersData)
@@ -30,10 +27,13 @@ function App() {
     const getUser = (id) => {
       fetch(`http://localhost:9292/users/${id}`)
       .then(resp => resp.json())
-      .then(userData => console.log(userData))
+      .then(user => console.log(user))
       // .then(userData => setUsers(userData))
     }
+    debugger;
 
+
+    
 
   return (
     <div className="App">
