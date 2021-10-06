@@ -2,24 +2,28 @@ import React from 'react'
 
 function HomePage({ users }) {
 
+    const userData = users.map(user => {
+        console.log(user)
+        return <h1>{user.name}</h1>
+    })
+
     return (
-        <div id="homepage">{users.map(user => {
-            <div className="profile">
-                <h2>{user.name}</h2>
-                <img
-                    src={user.image}
-                    alt={user.name}
-                    className="user-avatar"
-                />
-                <p>{user.likes} Likes </p>
-                <button className="like-btn" onClick={() => handleLikeClick()}>Like {"<3"}</button>
-                <button className="del-btn">Donate to GoodWill</button>
-            </div>
-        })}</div>
+        <h1>Hi {userData}</h1>
+        // <div id="homepage">{users.map(user => {
+        //     <div className="profile">
+        //         <h2>{user.name}</h2>
+        //         <img
+        //             src={user.image}
+        //             alt={user.name}
+        //             className="user-avatar"
+        //         />
+        //         {/* <p>{user.likes} Likes </p>
+        //         <button className="like-btn" onClick={() => handleLikeClick()}>Like {"<3"}</button>
+        //         <button className="del-btn">Donate to GoodWill</button> */}
+        //     </div>
+        // })}</div>
       );
-    // const userData = users.map(user => {
-    //     console.log(user)
-    // }
+    
 
     // user => <ToyCard toy={toy} renderUpdatedToy={renderUpdatedToy}/>
 
