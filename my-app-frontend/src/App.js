@@ -32,7 +32,7 @@ function App() {
     <div className="App">
     <Router> 
     <NavBar />
-        
+
         <Route path="/homepage">
             <HomePage />
         </Route>
