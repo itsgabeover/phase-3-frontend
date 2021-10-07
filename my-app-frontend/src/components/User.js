@@ -10,14 +10,19 @@ function User( {users} ) {
 
     return (
         <>
-        <div>
-        {currentUser.gamer_tag}
-        {currentUser.email}
+        <div id="user-profile">
+            <h1>{currentUser.gamer_tag}</h1>
+            <p>{currentUser.name}</p>
+            <p>{currentUser.bio}</p>
+            <p>Member since {currentUser.creation_date}</p>
+            <div id="user-image">
+                <img src="{currentUser.image_url}" alt="{currentUser.gamer_tag} Avatar" />
+            </div>
         </div>
         <form className="aboutme">
-        <label>About me: </label>
-        <input type="text" name="aboutme" className="login-form-input" placeholder="Gamertag/E-mail..." />
-        <button className="aboutme">Update About Me</button>
+            <label>About me: </label>
+            <input type="text" name="aboutme" className="login-form-input" placeholder="Gamertag/E-mail..." />
+            <button className="aboutme">Update About Me</button>
         </form>
         </>
 
