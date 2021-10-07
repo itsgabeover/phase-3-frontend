@@ -11,6 +11,7 @@ import User from './components/User';
 
 function App() {
   const [ users, setUsers] = useState([])
+  const [ activeUser, setActiveUser] = useState({})
 
     const getUsers = () => {
         fetch("http://localhost:9292/users")
@@ -45,19 +46,19 @@ function App() {
     <Router> 
     <NavBar />
         <Route path="/user/:id">
-            <User users={users}/>
+            <User users={users} activeUser={activeUser}/>
         </Route >
 
         <Route path="/friends">
-            <Friends />
+            <Friends activeUser={activeUser} />
         </Route>
 
         <Route path="/games">
-            <Games />
+            <Games activeUser={activeUser} />
         </Route>
 
         <Route exact path="/">
-            <Login users={users}/>  
+            <Login users={users} setActiveUser={setActiveUser}/>  
         </Route >
     </Router>
     </div>
