@@ -18,11 +18,11 @@ function App() {
         // .then(usersData => setUsers(usersData))
       }
 
-      useEffect(() => {
-        fetch("http://localhost:9292/users")
-          .then((res) => res.json())
-          .then(setUsers)  
-      }, [])
+      // useEffect(() => {
+      //   fetch("http://localhost:9292/users")
+      //     .then((res) => res.json())
+      //     .then(setUsers)  
+      // }, [])
 
     
     // const renderNewUsers = (newUser) => {

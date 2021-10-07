@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Login({ users }) {
-
+    
     function handleNewUser(e) {
         e.preventDefault()
         if (e.target.password.value !== e.target.password_confirm.value) {
@@ -26,10 +26,8 @@ function Login({ users }) {
         }
       }
 
-    console.log(users)
     return (
-        <div className="row">
-        <div className="column1">
+        <>
             <form className="login-form">
                 <label>Gamertag/E-mail: </label>
                 <input type="text" name="name" className="login-form-input" placeholder="Gamertag/E-mail..." />
@@ -37,8 +35,6 @@ function Login({ users }) {
                 <input type="text" name="description" className="login-form-input" placeholder="Password..." />
                 <button className="login-button">Login</button>
             </form>
-        </div>
-        <div className="column2">
             <form onSubmit={handleNewUser} className="create-user-form">
                 <label>Full Name: </label>
                 <input type="text" name="name" className="login-form-input" placeholder="Enter your full name..." />
@@ -52,8 +48,7 @@ function Login({ users }) {
                 <input type="text" name="password_confirm" className="login-form-input" placeholder="Confirm new password..." />
                 <button className="create-user-button">Create New User</button>
             </form>
-        </div>
-      </div>
+        </>
     )
 
 }
