@@ -17,17 +17,9 @@ function HomePage({ users }) {
         //             alt={user.name}
         //             className="user-avatar"
         //         />
-        //         {/* <p>{user.likes} Likes </p>
-        //         <button className="like-btn" onClick={() => handleLikeClick()}>Like {"<3"}</button>
-        //         <button className="del-btn">Donate to GoodWill</button> */}
         //     </div>
         // })}</div>
       );
-    
-
-    // user => <ToyCard toy={toy} renderUpdatedToy={renderUpdatedToy}/>
-
-    // <div id="toy-collection">{toys.map(toy => <ToyCard toy={toy} renderUpdatedToy={renderUpdatedToy}/>)}</div>
 
     // return (
     //     <div id="homepage">
