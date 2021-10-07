@@ -17,6 +17,7 @@ function App() {
         .then(userData => setUsers(userData))
         // .then(usersData => setUsers(usersData))
       }
+      getUsers();
 
       // useEffect(() => {
       //   fetch("http://localhost:9292/users")
