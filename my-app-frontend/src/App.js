@@ -17,7 +17,6 @@ function App() {
         .then(userData => setUsers(userData))
         // .then(usersData => setUsers(usersData))
       }
-      getUsers();
 
       // useEffect(() => {
       //   fetch("http://localhost:9292/users")
@@ -54,7 +53,7 @@ function App() {
 
         <Route path="/games">
             <Games />
-        </Route >git a
+        </Route>
 
         <Route exact path="/">
              <Login users={users}/>  
