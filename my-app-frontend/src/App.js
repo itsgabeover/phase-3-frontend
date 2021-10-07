@@ -7,6 +7,7 @@ import  HomePage  from "./components/HomePage"
 import Login from './components/Login';
 import Friends from './components/Friends';
 import Games from './components/Games';
+import User from './components/User';
 
 function App() {
   const [ users, setUsers] = useState([])
@@ -16,13 +17,13 @@ function App() {
         .then(resp => resp.json())
         .then(usersData => setUsers(usersData))
       }
-      getUsers();
 
-      // useEffect(() => {
-      //   fetch("http://localhost:9292/users")
-      //     .then((res) => res.json())
-      //     .then(setUsers)  
-      // }, [])
+      useEffect(() => {
+        fetch("http://localhost:9292/users")
+          .then((res) => res.json())
+          .then(setUsers)  
+      }, [])
+
     
     // const renderNewUsers = (newUser) => {
     //   console.log(usersData)
@@ -39,9 +40,9 @@ function App() {
     <div className="App">
     <Router> 
     <NavBar />
-        <Route path="/homepage">
-            <HomePage users={users}/>
-        </Route>
+        <Route path="/user/:id">
+            <User users={users}/>
+        </Route >
 
         <Route path="/friends">
             <Friends />
@@ -49,10 +50,10 @@ function App() {
 
         <Route path="/games">
             <Games />
-        </Route >git a
+        </Route>
 
         <Route exact path="/">
-             <Login users={users}/>  
+            <Login users={users}/>  
         </Route >
     </Router>
     </div>

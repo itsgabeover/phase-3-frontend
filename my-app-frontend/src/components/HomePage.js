@@ -1,4 +1,5 @@
 import React from 'react'
+import Login from './Login'
 
 function HomePage({ users }) {
 
@@ -8,6 +9,7 @@ function HomePage({ users }) {
     })
 
     return (
+<<<<<<< HEAD
         <h1>Hi {userData}</h1>
         // <div id="homepage">{users.map(user => {
         //     <div className="profile">
@@ -26,6 +28,13 @@ function HomePage({ users }) {
     //         <h1>Welcome, {userData.gamer_tag}</h1>
     //         {/* <h2></h2>
     //         <img src="{user.image_url}" alt="{user.name}" /> */}
+=======
+        <>
+        <div>HomePage!!!</div>
+        <div>HomePage!!!</div>
+        </>
+    )
+>>>>>>> dev
 
     //     </div>
     // )
