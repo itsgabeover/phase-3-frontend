@@ -20,14 +20,6 @@ function Login( {users} ) {
         }
     } 
 
-        // if (foundUser) {
-        //     window.alert("You are logged in")
-        //     //SOME FUNCTION TO LINK TO MY PROFILE PAGE
-        // } else {
-        //     window.alert("Incorrect username or password. Please try again.")
-        //     e.target.reset()
-        // 
-
 
     function handleNewUser(e) {
         e.preventDefault()
