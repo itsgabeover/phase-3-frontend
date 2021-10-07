@@ -11,6 +11,7 @@ import User from './components/User';
 
 function App() {
   const [ users, setUsers] = useState([])
+  const [ games, setGames ] = useState([])
 
     const getUsers = () => {
         fetch("http://localhost:9292/users")
@@ -25,7 +26,11 @@ function App() {
           .then(setUsers)  
       }, [])
 
-
+      useEffect(() => {
+        fetch("http://localhost:9292/games")
+          .then((res) => res.json())
+          .then(setGames)  
+      }, [])
     
     // const renderNewUsers = (newUser) => {
     //   console.log(usersData)
@@ -54,7 +59,7 @@ function App() {
         </Route>
 
         <Route path="/games">
-            <Games />
+            <Games games={games}/>
         </Route>
 
         <Route exact path="/">

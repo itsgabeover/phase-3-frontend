@@ -11,8 +11,8 @@ function User( {users} ) {
     return (
         <>
         <div>
-        {currentUser.gamer_tag}
-        {currentUser.email}
+        {/* {currentUser.gamer_tag} */}
+        {/* {currentUser.email} */}
         </div>
         <form className="aboutme">
         <label>About me: </label>
