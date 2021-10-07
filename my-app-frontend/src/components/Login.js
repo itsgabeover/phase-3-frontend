@@ -1,14 +1,18 @@
 import React from 'react'
+import { useHistory } from 'react-router';
 
 function Login( {users} ) {
+    let history = useHistory()
 
     function handleLogin(e) {
         e.preventDefault()
+
         const foundUser = users.find( user => user.gamer_tag === e.target.gamer_tag.value );
         if (foundUser) {
             if (foundUser.password === e.target.password.value ) {
                 window.alert("Login successful!")
                 e.target.reset()
+                history.push(`/user/${foundUser.id}`)
             } else { 
                 window.alert("Login unsuccessful, please try again")
                 e.target.reset()
