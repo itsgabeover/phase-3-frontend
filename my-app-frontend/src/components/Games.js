@@ -12,8 +12,11 @@ function Games() {
 
   }
 
+
+
+
   console.log(getGames)
-  
+
     return (
 
         <div>games</div>

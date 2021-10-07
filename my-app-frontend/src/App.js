@@ -25,6 +25,14 @@ function App() {
           .then(setUsers)  
       }, [])
 
+
+
+      useEffect(() => {
+        fetch("http://http://localhost:9292/games")
+        .then((res) => res.json())
+        .then(gamesData)
+      }, [])
+
     
     // const renderNewUsers = (newUser) => {
     //   console.log(usersData)
