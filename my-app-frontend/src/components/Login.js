@@ -1,7 +1,30 @@
 import React from 'react'
 
 function Login({ users }) {
-    
+
+    // function handleLogin(e) {
+    //     e.preventDefault()
+
+    //     const foundGamerTag = users.find( ({gamer_tag}) => gamer_tag === e.target.name.value );
+    //     if (foundGamerTag) {
+    //         if (foundGamerTag.password === e.target.password.value ) {
+    //             window.alert("Login successful!")
+    //         } else { 
+    //             window.alert("Login unsuccessful, please try again")
+    //             e.target.reset()
+    //         }
+    //     } else if {
+            
+    //     }
+
+    //     if (foundUser) {
+    //         window.alert("You are logged in")
+    //         //SOME FUNCTION TO LINK TO MY PROFILE PAGE
+    //     } else {
+    //         window.alert("Incorrect username or password. Please try again.")
+    //         e.target.reset()
+    //     }
+    // }
     function handleNewUser(e) {
         e.preventDefault()
         if (e.target.password.value !== e.target.password_confirm.value) {
@@ -25,14 +48,14 @@ function Login({ users }) {
         e.target.reset()
         }
       }
-
+      //onSubmit={handleLogin} 
     return (
         <>
             <form className="login-form">
                 <label>Gamertag/E-mail: </label>
                 <input type="text" name="name" className="login-form-input" placeholder="Gamertag/E-mail..." />
                 <label>Password: </label>
-                <input type="text" name="description" className="login-form-input" placeholder="Password..." />
+                <input type="text" name="password" className="login-form-input" placeholder="Password..." />
                 <button className="login-button">Login</button>
             </form>
             <form onSubmit={handleNewUser} className="create-user-form">
