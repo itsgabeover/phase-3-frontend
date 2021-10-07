@@ -54,7 +54,7 @@ function App() {
 
         <Route path="/games">
             <Games />
-        </Route >
+        </Route >git a
 
         <Route exact path="/">
              <Login users={users}/>  
