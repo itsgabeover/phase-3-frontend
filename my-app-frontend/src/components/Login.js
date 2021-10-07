@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router';
 
-function Login( {users} ) {
+function Login( {users, setActiveUser} ) {
     let history = useHistory()
 
     function handleLogin(e) {
@@ -12,6 +12,7 @@ function Login( {users} ) {
             if (foundUser.password === e.target.password.value ) {
                 window.alert("Login successful!")
                 e.target.reset()
+                setActiveUser(foundUser)
                 history.push(`/user/${foundUser.id}`)
             } else { 
                 window.alert("Login unsuccessful, please try again")
