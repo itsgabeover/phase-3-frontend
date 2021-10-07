@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Games() {
 
@@ -12,8 +12,19 @@ function Games() {
 
   }
 
+
+
+  useEffect(() => {
+    fetch("http://http://localhost:9292/games")
+    .then((res) => res.json())
+    .then(gamesData)
+  }, [])
+
+
+
+
   console.log(getGames)
-  
+
     return (
 
         <div>games</div>
