@@ -16,12 +16,13 @@ function App() {
         .then(resp => resp.json())
         .then(usersData => setUsers(usersData))
       }
+      getUsers();
 
-      useEffect(() => {
-        fetch("http://localhost:9292/users")
-          .then((res) => res.json())
-          .then(setUsers)  
-      }, [])
+      // useEffect(() => {
+      //   fetch("http://localhost:9292/users")
+      //     .then((res) => res.json())
+      //     .then(setUsers)  
+      // }, [])
     
     // const renderNewUsers = (newUser) => {
     //   console.log(usersData)
@@ -48,7 +49,7 @@ function App() {
 
         <Route path="/games">
             <Games />
-        </Route >
+        </Route >git a
 
         <Route exact path="/">
              <Login users={users}/>  
