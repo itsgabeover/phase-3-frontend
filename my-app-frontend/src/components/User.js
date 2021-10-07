@@ -4,6 +4,7 @@ import { useParams } from 'react-router'
 function User( {users} ) {
 
     let currentURL = window.location.pathname
+    console.log(currentURL)
     let splitURL = currentURL.split("/")
     let currentUser = users.find(({ id }) => id === parseInt(splitURL[2]))
 
@@ -12,7 +13,7 @@ function User( {users} ) {
     return (
         <div>
         {currentUser.gamer_tag}
-        ICE CREAM!
+        {currentUser.email}
         </div>
     )
 
