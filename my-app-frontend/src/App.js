@@ -50,7 +50,7 @@ function App() {
   return (
     <div className="App">
     <Router> 
-    <NavBar />
+    <NavBar activeUser={activeUser}/>
         <Route path="/user/:id">
             <User users={users} activeUser={activeUser}/>
         </Route >

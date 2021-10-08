@@ -1,9 +1,8 @@
 import React from 'react'
 import { useHistory } from 'react-router';
 
-function NavBar() {
+function NavBar(activeUser) {
     let history = useHistory()
-
     return (
         <div className="navbar">
           <div>
@@ -13,7 +12,7 @@ function NavBar() {
           </div>
             <h3 className="navbarh3" onClick={() => history.push("/games")}>My Games</h3>
             <h3 className="navbarh3" onClick={() => history.push("/friends")}>My Friends</h3>
-            <h3 className="navbarh3" onClick={() => history.push("/homepage")}>My Profile</h3>
+            <h3 className="navbarh3" onClick={() => history.push(`/user/`)}>My Profile</h3>
         </div>
       )
 }
