@@ -8,7 +8,7 @@ console.log(games)
 
     return (
 
-        <div>hi 
+        <div>
           {games.map(game => <h2>{game.game_title}</h2> )}
         </div>
     )
