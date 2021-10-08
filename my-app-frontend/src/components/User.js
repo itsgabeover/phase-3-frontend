@@ -29,12 +29,12 @@ function User( {users, activeUser} ) {
     return (
         <>
         <div id="user-profile">
+            <div id="user-image" className="user-image">
+                <img src={activeUser.image_url} alt={activeUser.gamer_tag}/>
+            </div>
             <h1>{activeUser.gamer_tag}</h1>
             <p>{activeUser.name}</p>
             <p>{activeUser.bio}</p>
-            <div id="user-image">
-                <img src={activeUser.image_url} alt={activeUser.gamer_tag}/>
-            </div>
         </div>
 
         <form onSubmit={handleUpdateUser} className="user-preferences">
