@@ -12,6 +12,15 @@ code {
     monospace;
 }
 
+.navbarlogo {
+  width: 40%;
+  height: 40%;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .navbarh3 {
   display: inline-block;
   margin-right: 20px;

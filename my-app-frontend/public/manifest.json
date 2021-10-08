@@ -1,6 +1,6 @@
 {
   "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Gamer Gang React App",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,14 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "gamer-gang-logo-red.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "1024×400"
     },
     {
-      "src": "logo512.png",
+      "src": "gamer-gang-logo-blue.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "1024×400"
     }
   ],
   "start_url": ".",
