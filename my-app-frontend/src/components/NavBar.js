@@ -12,7 +12,7 @@ function NavBar(activeUser) {
           </div>
             <h3 className="navbarh3" onClick={() => history.push("/games")}>My Games</h3>
             <h3 className="navbarh3" onClick={() => history.push("/friends")}>My Friends</h3>
-            <h3 className="navbarh3" onClick={() => history.push(`/user/`)}>My Profile</h3>
+            <h3 className="navbarh3" onClick={() => history.push(`/user`)}>My Profile</h3>
         </div>
       )
 }

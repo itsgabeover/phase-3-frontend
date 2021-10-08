@@ -51,7 +51,7 @@ function App() {
     <div className="App">
     <Router> 
     <NavBar activeUser={activeUser}/>
-        <Route path="/user/:id">
+        <Route path="/user">
             <User users={users} activeUser={activeUser}/>
         </Route >
 
