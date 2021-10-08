@@ -50,9 +50,10 @@ code {
   padding-top: 50px;
   max-width: 500px;
 }
-.aboutme {
+.user-preferences {
   padding-top: 50px;
   max-width: 500px;
+  margin: auto;
 }
 .login-form-input {
   width: 100%;
