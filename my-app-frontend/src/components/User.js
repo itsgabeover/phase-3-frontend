@@ -5,6 +5,7 @@ function User( {users, activeUser} ) {
 
     function handleUpdateUser(e) {
         e.preventDefault()
+
         const userUpdate = {
             email: e.target.email.value,
             image_url: e.target.image.value,
@@ -31,18 +32,17 @@ function User( {users, activeUser} ) {
             <h1>{activeUser.gamer_tag}</h1>
             <p>{activeUser.name}</p>
             <p>{activeUser.bio}</p>
-            <p>Member since {activeUser.creation_date}</p>
             <div id="user-image">
                 <img src={activeUser.image_url} alt={activeUser.gamer_tag}/>
             </div>
         </div>
 
         <form onSubmit={handleUpdateUser} className="user-preferences">
-            <label>Update email: </label>
-            <input type="text" name="email" className="aboutme" placeholder="Talk about yourself.." />
+            <label>Update Email: </label>
+            <input type="text" name="email" className="aboutme" placeholder="Email..." />
             <label>Update Image URL: </label>
             <input type="text" name="image" className="addimage" placeholder="Image URL..." />
-            <label>Update About me: </label>
+            <label>Update About Me: </label>
             <input type="text" name="aboutme" className="aboutme" placeholder="Talk about yourself.." />
             <button className="save">Save Preferences</button>
         </form>
