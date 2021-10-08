@@ -40,10 +40,13 @@ function User( {users, activeUser} ) {
         <form onSubmit={handleUpdateUser} className="user-preferences">
             <label>Update Email: </label>
             <input type="text" name="email" className="aboutme" placeholder="Email..." />
+            <br></br>
             <label>Update Image URL: </label>
             <input type="text" name="image" className="addimage" placeholder="Image URL..." />
+            <br></br>
             <label>Update About Me: </label>
             <input type="text" name="aboutme" className="aboutme" placeholder="Talk about yourself.." />
+            <br></br>
             <button className="save">Save Preferences</button>
         </form>
         </>
