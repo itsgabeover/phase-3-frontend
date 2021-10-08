@@ -3,7 +3,12 @@ import { useHistory } from 'react-router';
 
 function Login( {users, setActiveUser} ) {
     let history = useHistory()
-
+    function gamesOfUser(activeUser) {
+        console.log(activeUser.id)
+        fetch(`http://localhost:9292/games/${activeUser.id}`)
+          .then((res) => res.json())
+          .then(userGames => setGames(userGames))
+    }
     function handleLogin(e) {
         e.preventDefault()
 
@@ -13,6 +18,7 @@ function Login( {users, setActiveUser} ) {
                 window.alert("Login successful!")
                 e.target.reset()
                 setActiveUser(foundUser)
+                gamesOfUser(foundUser)
                 history.push(`/user/${foundUser.id}`)
             } else { 
                 window.alert("Login unsuccessful, please try again")
