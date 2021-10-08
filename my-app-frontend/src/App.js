@@ -20,18 +20,20 @@ function App() {
         .then(userData => setUsers(userData))
         // .then(usersData => setUsers(usersData))
       }
-
+      //all the users   
       useEffect(() => {
         fetch("http://localhost:9292/users")
           .then((res) => res.json())
           .then(setUsers)  
       }, [])
-
+      //All the games
       useEffect(() => {
         fetch("http://localhost:9292/games")
           .then((res) => res.json())
           .then(games => setGames(games))  
       }, [])
+      //only games for the active user
+
     
     // const renderNewUsers = (newUser) => {
     //   console.log(usersData)
@@ -55,16 +57,12 @@ function App() {
             <User users={users} activeUser={activeUser}/>
         </Route >
 
-        <Route path="/friends">
-            <Friends activeUser={activeUser} />
-        </Route>
-
         <Route path="/games">
-            <Games activeUser={activeUser} games={games} />
+            <Games activeUser={activeUser} games={games} setGames={setGames}/>
         </Route>
 
         <Route exact path="/">
-            <Login users={users} setActiveUser={setActiveUser}/>  
+            <Login activeUser={activeUser} setGames={setGames} users={users} setActiveUser={setActiveUser}/>  
         </Route >
     </Router>
     </div>

@@ -1,10 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 
-function Games({ games }) {
+function Games({ games, activeUser, setGames }) {
 
-console.log(games)
- 
 
     return (
 
