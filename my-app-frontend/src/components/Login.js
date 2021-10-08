@@ -55,23 +55,30 @@ function Login( {users, setActiveUser, setGames} ) {
     return (
         <>
             <form onSubmit={handleLogin} className="login-form">
-                <label>Gamertag: </label>
+                <label>Gamertag:  </label>
                 <input type="text" name="gamer_tag" className="login-form-input" placeholder="Gamertag/E-mail..." />
-                <label>Password: </label>
+                <br></br>
+                <label>Password:  </label>
                 <input type="text" name="password" className="login-form-input" placeholder="Password..." />
+                <br></br>
                 <button className="login-button">Login</button>
             </form>
             <form onSubmit={handleNewUser} className="create-user-form">
-                <label>Full Name: </label>
+                <label>Full Name:  </label>
                 <input type="text" name="name" className="login-form-input" placeholder="Enter your full name..." />
-                <label>E-mail: </label>
+                <br></br>
+                <label>E-mail:  </label>
                 <input type="text" name="email" className="login-form-input" placeholder="Enter your e-mail address..." />
-                <label>Gamertag: </label>
+                <br></br>
+                <label>Gamertag:  </label>
                 <input type="text" name="gamer_tag" className="login-form-input" placeholder="Enter new gamertag..." />
-                <label>Password: </label>
+                <br></br>
+                <label>Password:  </label>
                 <input type="text" name="password" className="login-form-input" placeholder="Enter new password..." />
-                <label>Confirm Password: </label>
+                <br></br>
+                <label>Confirm Password:  </label>
                 <input type="text" name="password_confirm" className="login-form-input" placeholder="Confirm new password..." />
+                <br></br>
                 <button className="create-user-button">Create New User</button>
             </form>
         </>

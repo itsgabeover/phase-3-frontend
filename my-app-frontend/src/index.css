@@ -1,3 +1,7 @@
+. {
+  margin-bottom: auto;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,7 +19,6 @@ code {
 .navbarlogo {
   width: 40%;
   height: 40%;
-  
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -24,8 +27,8 @@ code {
 .navbarh3 {
   display: inline-block;
   margin-right: 20px;
-  background-color: #5900ff;
-  padding: 10px;
+  background-color: #2f34baef;
+  padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
   color: white;
@@ -38,37 +41,108 @@ code {
   margin-right: auto;
   padding: 10px;
   text-align: center;
-  background: #afb0ff;
+  background: #e4e4e4;
   background-clip: margin-box;
+  margin: none;
 }
 
 .login-form {
-  padding-top: 50px;
-  max-width: 500px;
+  margin-top: 5%;
+  max-width: 100%;
+  width: auto;
+  padding: 12px 20px;
 }
+
+.login-form input {
+  margin-bottom: 2%;
+  padding: 4px 4px;
+  border: none;
+  border-bottom: 2px solid #2f34baef;
+}
+  /* INPUT OPTION 2 - NO BOARDER WITH DROP SHADOW
+  padding-top: 10px;
+  padding:10px;
+  border:0;
+  border-radius:10px;
+  box-shadow:0 0 15px 4px rgba(47,52,186,0.18); */
+
+.login-form label {
+  font-weight: 400;
+  font-size: medium;
+}
+
+.login-form button {
+  display: inline-block;
+  margin-right: 20px;
+  background-color: #83bd25ef;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  border-radius: 7px;
+}
+
 .create-user-form {
-  padding-top: 50px;
-  max-width: 500px;
-}
-.user-preferences {
-  padding-top: 50px;
-  max-width: 500px;
-  margin: auto;
-}
-.login-form-input {
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   padding: 12px 20px;
   margin: 8px 0;
+}
+
+.create-user-form input {
+  margin-bottom: 2%;
+  padding: 4px 4px;
+  border: none;
+  border-bottom: 2px solid #2f34baef;
+}
+
+.create-user-form button {
   display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  margin-right: 20px;
+  background-color: #83bd25ef;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  border-radius: 7px;
 }
-.column1 {
-  float: left;
-  margin-left: 50px;
+
+.user-image img {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  display: block;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.column2 {
-  float: right;
-  margin-right: 50px;
+
+.user-preferences {
+  margin-top: 5%;
+  max-width: 100%;
+  padding: 12px 20px;
+}
+
+.user-preferences label {
+  font-weight: 400;
+  font-size: medium;
+}
+
+.user-preferences input {
+  margin-bottom: 2%;
+  padding: 4px 4px;
+  border: none;
+  border-bottom: 2px solid #2f34baef;
+}
+
+.user-preferences button {
+  display: inline-block;
+  margin-right: 20px;
+  background-color: #83bd25ef;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  border-radius: 7px;
 }
