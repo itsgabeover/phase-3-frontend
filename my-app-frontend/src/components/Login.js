@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router';
 
-function Login( {users, setActiveUser} ) {
+function Login( {users, setActiveUser, setGames} ) {
     let history = useHistory()
     function gamesOfUser(activeUser) {
         console.log(activeUser.id)

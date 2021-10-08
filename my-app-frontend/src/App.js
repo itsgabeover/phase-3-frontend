@@ -64,7 +64,7 @@ function App() {
         </Route>
 
         <Route exact path="/">
-            <Login users={users} setActiveUser={setActiveUser}/>  
+            <Login users={users} setActiveUser={setActiveUser} setGames={setGames}/>  
         </Route >
     </Router>
     </div>
